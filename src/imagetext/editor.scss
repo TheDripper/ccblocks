@@ -1,0 +1,15 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.right {
+	.blocks-rich-text {
+		order: 1;
+	}
+	.image-button {
+		order: 2;
+	}
+}
