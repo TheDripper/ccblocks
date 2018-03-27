@@ -32,6 +32,9 @@ registerBlockType( 'ccblocks/ccgallery', {
 			    mages: media
     		    } );
     		};
+		//let mageTags = mages.map(mage=>{
+		//	return <img src={mage.url} />
+		//});
 		return (
 			<div className={ attributes.className }>
 				<MediaUpload
@@ -56,11 +59,13 @@ registerBlockType( 'ccblocks/ccgallery', {
         	    }
         	} = props;
 		let mageTags = mages.map(mage=>{
-			<img src={mage} />
+			return <img src={mage.url} />
 		});
 		return (
 			<div className={ props.className }>
-			<h1>TEST</h1>
+			<span className="mages">
+				{mageTags}
+			</span>
 			</div>
 		);
 	},

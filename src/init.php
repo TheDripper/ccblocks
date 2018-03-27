@@ -9,6 +9,11 @@ function ccblocks_cgb_block_assets() {
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ), // Block style CSS.
 		array( 'wp-blocks' ) // Dependency to include the CSS after it.
 	);
+	wp_enqueue_script('feather',plugins_url('dist/featherlight.min.js',dirname(__FILE__)));
+	wp_enqueue_script('feathergal',plugins_url('dist/featherlight.gallery.min.js',dirname(__FILE__)));
+	wp_enqueue_script('front',plugins_url('dist/front.js',dirname(__FILE__)),array('jquery'));
+	wp_enqueue_style('feather',plugins_url('dist/featherlight.min.css',dirname(__FILE__)));
+	wp_enqueue_style('feathergal',plugins_url('dist/featherlight.gallery.min.css',dirname(__FILE__)));
 } 
 
 add_action( 'enqueue_block_assets', 'ccblocks_cgb_block_assets' );
